@@ -1,0 +1,7 @@
+<uwsgi>
+	<socket>:8077</socket>
+	<chdir>/usr/Projects/FirstDJ</chdir>
+	<module>wsgi</module>
+	<processes>4</processes>
+	<daemonize>uwsgi.log</daemonize>
+</uwsgi>

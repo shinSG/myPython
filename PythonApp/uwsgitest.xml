@@ -1,0 +1,9 @@
+<uwsgi>
+	<socket>127.0.0.1:8086</socket>
+	<chdir>/usr/Projects/PythonApp</chdir>
+	<module>test.py</module>
+	<master>True</master>
+	<pidfile>/tmp/project-master.pid</pidfile>
+	<vacuum>True</vacuum>
+	<daemonize>/usr/Projects/PythonApp/uwsgi.log</daemonize>
+</uwsgi>
