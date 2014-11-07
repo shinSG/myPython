@@ -22,5 +22,10 @@ class GetData(object):
                 query['end'] = datetime.datetime.strptime(query['start'], "%Y-%m-%d") + datetime.timedelta(hours=24)
             file_list = sf.getfilelist(query['start'], query['end'], query['filetype'])
         else:
-            file_list = {'ERROR': 'NO FILE TYPE'}
+            if 'start' not in query.keys():
+                file_list = sf.getfileno2t()
+                return file_list
+            elif 'end' not in query.keys():
+                query['end'] = datetime.datetime.strptime(query['start'], "%Y-%m-%d") + datetime.timedelta(hours=24)
+            file_list = sf.getfileno_type(query['start'], query['end'])
         return file_list
