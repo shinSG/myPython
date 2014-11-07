@@ -55,6 +55,3 @@ class RequestHandler(BaseHTTPRequestHandler):
             else:
                 self.send_error(400)
 #        else:
-
-
-

@@ -24,5 +24,3 @@ class GetData(object):
         else:
             file_list = {'ERROR': 'NO FILE TYPE'}
         return file_list
-        '''else:
-            return {'ERROR':'NO FILE TYPE'}'''
